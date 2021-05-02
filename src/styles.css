@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  background-color: rgb(25,25,25);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 60vh;
+  width: 27vw;
+  background-color: crimson;
+  border-radius: 15px;
+
+
+}
+.button {
+  background-color: rgb(25,25,25);
+  color: rgba(255,255,255,.75);
+  border: 2px solid crimson;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  font-size: large;
+  animation: turn 2.5s ease-in-out;
+  cursor: pointer;
+  
+}
+.button:active {
+  color: orangered;
+}
+
+@keyframes turn {
+  0%,
+  100% {
+    color: rgba(255,255,255,.75);
+  }
+  50% {
+    color: crimson;
+  }
+}
+
+#equals {
+  margin-right:-9vw;
+}
+.button:hover {
+  background-color: brown;
+  border-color: rgba(255,255,255,.75);
+  border-width: 3px;
+}
+
+#display {
+  border-top: 3px solid crimson;
+  width: 27vw;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  overflow-x:auto ;
+  overflow-y: hidden;
+  animation: colorful 3s ease-in-out;
+}
+
+@keyframes colorful {
+  0%,
+  100% {
+    border-color: crimson;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+.number {
+  color: orange;
+  font-family: monospace;
+  font-size: 5rem;
+}
